@@ -522,7 +522,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     description: 'Create your blog content';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     title: Schema.Attribute.String;
@@ -533,6 +533,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    quotes: Schema.Attribute.Component<'shared.quote', true>;
     blocks: Schema.Attribute.DynamicZone<
       ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
     >;
@@ -560,7 +561,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     description: 'Create authors for your content';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     name: Schema.Attribute.String;

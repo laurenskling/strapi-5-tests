@@ -48,6 +48,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     body: Schema.Attribute.Text;
+    author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
   };
 }
 

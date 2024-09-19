@@ -8,7 +8,7 @@
     "description": "Create your blog content"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -34,6 +34,11 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "articles"
+    },
+    "quotes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
     },
     "blocks": {
       "type": "dynamiczone",
