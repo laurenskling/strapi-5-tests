@@ -560,7 +560,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     description: 'Create authors for your content';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     name: Schema.Attribute.String;
