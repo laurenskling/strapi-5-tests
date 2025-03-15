@@ -11,6 +11,11 @@
     },
     "body": {
       "type": "text"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
     }
   }
 }

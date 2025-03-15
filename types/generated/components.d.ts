@@ -18,6 +18,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
     icon: 'indent';
   };
   attributes: {
+    authors: Schema.Attribute.Relation<'oneToMany', 'api::author.author'>;
     body: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
